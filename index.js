@@ -2,7 +2,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 const path = require('path');
 
-const folderPath = path.join(__dirname, 'files');
+const folderPath = 'files';
 
 function calculateMD5(filePath) {
   const fileContent = fs.readFileSync(filePath);
