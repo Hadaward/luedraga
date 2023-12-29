@@ -23,7 +23,7 @@ function generateFileHashes() {
   });
 
   // Write the hashes to a JSON file
-  const outputFilePath = 'hash.json';
+  const outputFilePath = 'files/hash.json';
   fs.writeFileSync(outputFilePath, JSON.stringify(fileHashes, null, 2));
 
   console.log(`File hashes generated and saved to ${outputFilePath}`);
