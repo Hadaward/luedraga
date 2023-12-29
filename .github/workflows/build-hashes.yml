@@ -32,7 +32,7 @@ jobs:
         git config user.name "GitHub Actions"
         git add -A
         git commit -m "Update hash.json"
-        git push origin main
+        git push origin HEAD:main
 
   deploy:
     runs-on: ubuntu-latest
