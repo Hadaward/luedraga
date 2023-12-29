@@ -35,4 +35,5 @@ jobs:
       with:
         # Artifact name
         name: hash.json
+        path: files/
           
