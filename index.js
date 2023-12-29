@@ -17,6 +17,8 @@ function generateFileHashes() {
 
   // Generate hashes for each file
   files.forEach((file) => {
+    if (file.endsWith('hash.json'))
+        return;
     const filePath = path.join(folderPath, file);
     const hash = calculateMD5(filePath);
     fileHashes[file] = hash;
