@@ -21,6 +21,11 @@ jobs:
     - name: Build
       run: npm start
 
+    - name: Save hash.json
+      run: |
+        mkdir -p $GITHUB_WORKSPACE/files
+        cp hash.json $GITHUB_WORKSPACE/files/hash.json
+
   deploy:
     runs-on: ubuntu-latest
 
@@ -30,10 +35,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Upload GitHub Pages artifact
-      uses: actions/upload-pages-artifact@v3.0.0
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        # Artifact name
-        name: hash.json
-        path: files/
-          
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: files
