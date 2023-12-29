@@ -20,11 +20,6 @@ jobs:
 
     - name: Build
       run: npm start
-
-    - name: Save hash.json
-      run: |
-        mkdir -p $GITHUB_WORKSPACE/
-        cp hash.json $GITHUB_WORKSPACE/hash.json
         
   build:
     runs-on: ubuntu-latest
