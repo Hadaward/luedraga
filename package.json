@@ -1,10 +1,13 @@
 {
-  "name": "luedraga-hashfiles",
-  "version": "1.0.0",
+  "name": "luedraga-manifest-generator",
+  "version": "2.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "author": "Hadaward",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.5.10"
+  }
 }
